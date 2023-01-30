@@ -4,6 +4,7 @@
 // SVOLGIMENTO
 // Crea array vuoto
 const numbers = [];
+let outputMessage = document.getElementById("output_message");
 
 let somma = 0;
 // FINCHE' la somma degli elementi è minore di 50
@@ -15,4 +16,4 @@ while (somma < 50) {
     numbers.push(userNumber);
 }
 
-console.log(numbers);
+outputMessage.innerHTML = numbers;
