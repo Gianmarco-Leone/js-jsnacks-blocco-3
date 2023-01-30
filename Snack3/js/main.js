@@ -4,6 +4,7 @@
 // SVOLGIMENTO
 // Chiedi all'utente un numero
 let userNumber = parseInt(prompt("Scegli un numero"));
+let listEl = document.getElementById("list");
 
 // Generiamo n. array tanti quant'è il numero scelto dall'utente
 const nArray = [];
@@ -21,7 +22,9 @@ while (i < userNumber) {
         z++;
     }
     // Stampa array
-    console.log(userArray);
     nArray.push(userArray);
+    let listItemEl = document.createElement("li");
+    listItemEl.innerHTML = userArray;
+    listEl.append(listItemEl);
     i++;
 }
