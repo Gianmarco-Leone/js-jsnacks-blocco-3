@@ -4,17 +4,17 @@
 // SVOLGIMENTO
 // Chiedi all'utente un valore minimo
 let userMinNumber = parseInt(prompt("Scegli un numero come range minimo"));
-
 // Chiedi all'utente un valore massimo
 let userMaxNumber = parseInt(prompt("Scegli un numero come range massimo"));
 
+let outputMessageEl = document.getElementById("output_message");
+let messageText;
 
 // Genera numero all'interno del range
 let randomNumbers = Math.floor(Math.random() * 100) + 1;
-
 if (randomNumbers <= userMaxNumber && randomNumbers >= userMinNumber) {
-    console.log(randomNumbers);
+    messageText = randomNumbers;
 } else {
-    console.log(randomNumbers);
-    console.log("Il numero generato non rientra nel range");
+    messageText = "Il numero generato non rientra nel range";
 }
+outputMessageEl.innerHTML = messageText;
